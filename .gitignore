@@ -1,43 +1,15 @@
-# Logs
-logs
-*.log
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-pnpm-debug.log*
-lerna-debug.log*
-
-node_modules
-dist
-dist-ssr
-*.local
-
-# Editor directories and files
-.vscode/*
-!.vscode/extensions.json
-.idea
-.DS_Store
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-*.sw?
-
-# Android
+*.iml
 .gradle
 /local.properties
-/.bundle
+/.idea/caches
+/.idea/libraries
+/.idea/modules.xml
+/.idea/workspace.xml
+/.idea/navEditor.xml
+/.idea/assetWizardSettings.xml
+.DS_Store
 /build
 /captures
 .externalNativeBuild
 .cxx
 local.properties
-*.apk
-*.aar
-*.keystore
-!debug.keystore
-
-# UI and other
-.temp
-.cache
-.pnpm-debug.log*
