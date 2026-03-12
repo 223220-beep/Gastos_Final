@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.gastosapp.data.local.ExpenseEntity
 import com.gastosapp.databinding.ItemExpenseBinding
 import java.text.NumberFormat
+import java.text.SimpleDateFormat
 import java.util.*
 
 class ExpenseAdapter(private val listener: OnExpenseClickListener) :
@@ -38,7 +39,9 @@ class ExpenseAdapter(private val listener: OnExpenseClickListener) :
 
         fun bind(expense: ExpenseEntity) {
             binding.tvDescription.text = expense.description
-            binding.tvCategory.text = expense.category
+            val sdf = SimpleDateFormat("dd/MM/yyyy", Locale.getDefault())
+            val dateStr = sdf.format(Date(expense.timestamp))
+            binding.tvCategoryDate.text = "${expense.category} • $dateStr"
             binding.tvAmount.text = formatCurrency(expense.amount)
 
             binding.root.setOnClickListener {
