@@ -20,7 +20,7 @@ class WelcomeActivity : AppCompatActivity() {
 
         binding.btnRegister.setOnClickListener {
             startActivity(Intent(this, RegisterActivity::class.java))
-            finish()
+            // No terminamos la actividad para poder regresar
         }
     }
 }

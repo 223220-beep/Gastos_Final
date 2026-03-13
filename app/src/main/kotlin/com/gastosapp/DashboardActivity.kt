@@ -50,7 +50,9 @@ class DashboardActivity : AppCompatActivity(), ExpenseAdapter.OnExpenseClickList
         }
 
         binding.btnAddExpense.setOnClickListener {
-            startActivity(Intent(this, AddExpenseActivity::class.java))
+            val intent = Intent(this, AddExpenseActivity::class.java)
+            intent.putExtra("user_id", currentUser?.id.toString())
+            startActivity(intent)
         }
 
         binding.btnViewAll.setOnClickListener {

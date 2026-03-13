@@ -110,6 +110,18 @@
                 android:textSize="16sp"
                 android:textAllCaps="false" />
 
+            <!-- AHORA ES VISIBLE POR DEFECTO PARA PRUEBAS -->
+            <ImageButton
+                android:id="@+id/btnFingerprint"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="24dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/ic_fingerprint"
+                android:visibility="visible"
+                android:contentDescription="Login with fingerprint" />
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
