@@ -3,9 +3,13 @@
     package="com.gastosapp">
 
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.USE_BIOMETRIC" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
+    <uses-permission android:name="android.permission.VIBRATE" />
 
     <application
-        android:name=".GastosApplication"
+        android:name=".core.GastosApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -13,8 +17,21 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.GastosApp">
 
+        <receiver
+            android:name=".features.reminders.receiver.ReminderReceiver"
+            android:enabled="true"
+            android:exported="false" />
+
+        <service
+            android:name=".core.util.GastosFCMService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
         <activity
-            android:name=".WelcomeActivity"
+            android:name=".features.auth.presentation.WelcomeActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -23,40 +40,45 @@
         </activity>
 
         <activity
-            android:name=".LoginActivity"
+            android:name=".features.auth.presentation.LoginActivity"
             android:exported="false" />
 
         <activity
-            android:name=".RegisterActivity"
+            android:name=".features.auth.presentation.RegisterActivity"
             android:exported="false" />
 
         <activity
-            android:name=".DashboardActivity"
+            android:name=".features.expenses.presentation.DashboardActivity"
             android:exported="false" />
 
         <activity
-            android:name=".ExpensesListActivity"
+            android:name=".features.expenses.presentation.ExpensesListActivity"
             android:exported="false" />
 
         <activity
-            android:name=".AddExpenseActivity"
+            android:name=".features.expenses.presentation.AddExpenseActivity"
             android:exported="false" />
 
         <activity
-            android:name=".ExpenseDetailActivity"
+            android:name=".features.expenses.presentation.ExpenseDetailActivity"
             android:exported="false" />
 
         <activity
-            android:name=".ProfileActivity"
+            android:name=".features.profile.presentation.ProfileActivity"
             android:exported="false" />
 
         <activity
-            android:name=".AnalyticsActivity"
+            android:name=".features.analytics.presentation.AnalyticsActivity"
             android:exported="false" />
 
         <activity
-            android:name=".RemindersActivity"
+            android:name=".features.analytics.presentation.BudgetActivity"
             android:exported="false" />
+
+        <activity
+            android:name=".features.reminders.presentation.RemindersActivity"
+            android:exported="false" />
+
 
     </application>
 

@@ -164,6 +164,24 @@
 
             </LinearLayout>
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnBudgets"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:background="@drawable/btn_primary"
+                    android:text="Metas de Presupuesto"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    android:textAllCaps="false" />
+
+            </LinearLayout>
+
         </LinearLayout>
 
         <!-- Recent Expenses Section -->

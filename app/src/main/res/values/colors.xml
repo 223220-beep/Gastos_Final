@@ -25,8 +25,11 @@
     <color name="green_100">#DCFCE7</color>
     <color name="green_700">#15803D</color>
     
+    <color name="blue_50">#EFF6FF</color>
     <color name="blue_100">#DBEAFE</color>
+    <color name="blue_600">#2563EB</color>
     <color name="blue_700">#1D4ED8</color>
+    <color name="blue_800">#1E40AF</color>
     
     <color name="purple_100">#F3E8FF</color>
     <color name="purple_700">#7C3AED</color>
